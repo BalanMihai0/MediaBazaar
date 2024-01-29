@@ -1,0 +1,17 @@
+D:\Fontys_sem_2\Group_pr\G1_MediaBazaar\StoreLibrary\bin\Debug\net6.0\StoreLibrary.deps.json
+D:\Fontys_sem_2\Group_pr\G1_MediaBazaar\StoreLibrary\bin\Debug\net6.0\StoreLibrary.dll
+D:\Fontys_sem_2\Group_pr\G1_MediaBazaar\StoreLibrary\bin\Debug\net6.0\StoreLibrary.pdb
+D:\Fontys_sem_2\Group_pr\G1_MediaBazaar\StoreLibrary\bin\Debug\net6.0\CustomExceptions.dll
+D:\Fontys_sem_2\Group_pr\G1_MediaBazaar\StoreLibrary\bin\Debug\net6.0\UserLibrary.dll
+D:\Fontys_sem_2\Group_pr\G1_MediaBazaar\StoreLibrary\bin\Debug\net6.0\CustomExceptions.pdb
+D:\Fontys_sem_2\Group_pr\G1_MediaBazaar\StoreLibrary\bin\Debug\net6.0\UserLibrary.pdb
+D:\Fontys_sem_2\Group_pr\G1_MediaBazaar\StoreLibrary\obj\Debug\net6.0\StoreLibrary.csproj.AssemblyReference.cache
+D:\Fontys_sem_2\Group_pr\G1_MediaBazaar\StoreLibrary\obj\Debug\net6.0\StoreLibrary.GeneratedMSBuildEditorConfig.editorconfig
+D:\Fontys_sem_2\Group_pr\G1_MediaBazaar\StoreLibrary\obj\Debug\net6.0\StoreLibrary.AssemblyInfoInputs.cache
+D:\Fontys_sem_2\Group_pr\G1_MediaBazaar\StoreLibrary\obj\Debug\net6.0\StoreLibrary.AssemblyInfo.cs
+D:\Fontys_sem_2\Group_pr\G1_MediaBazaar\StoreLibrary\obj\Debug\net6.0\StoreLibrary.csproj.CoreCompileInputs.cache
+D:\Fontys_sem_2\Group_pr\G1_MediaBazaar\StoreLibrary\obj\Debug\net6.0\StoreLibrary.csproj.CopyComplete
+D:\Fontys_sem_2\Group_pr\G1_MediaBazaar\StoreLibrary\obj\Debug\net6.0\StoreLibrary.dll
+D:\Fontys_sem_2\Group_pr\G1_MediaBazaar\StoreLibrary\obj\Debug\net6.0\refint\StoreLibrary.dll
+D:\Fontys_sem_2\Group_pr\G1_MediaBazaar\StoreLibrary\obj\Debug\net6.0\StoreLibrary.pdb
+D:\Fontys_sem_2\Group_pr\G1_MediaBazaar\StoreLibrary\obj\Debug\net6.0\ref\StoreLibrary.dll

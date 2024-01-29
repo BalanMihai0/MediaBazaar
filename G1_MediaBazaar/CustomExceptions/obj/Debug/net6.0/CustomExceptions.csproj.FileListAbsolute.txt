@@ -1,0 +1,12 @@
+D:\Fontys_sem_2\Group_pr\G1_MediaBazaar\CustomExceptions\bin\Debug\net6.0\CustomExceptions.deps.json
+D:\Fontys_sem_2\Group_pr\G1_MediaBazaar\CustomExceptions\bin\Debug\net6.0\CustomExceptions.dll
+D:\Fontys_sem_2\Group_pr\G1_MediaBazaar\CustomExceptions\bin\Debug\net6.0\CustomExceptions.pdb
+D:\Fontys_sem_2\Group_pr\G1_MediaBazaar\CustomExceptions\obj\Debug\net6.0\CustomExceptions.csproj.AssemblyReference.cache
+D:\Fontys_sem_2\Group_pr\G1_MediaBazaar\CustomExceptions\obj\Debug\net6.0\CustomExceptions.GeneratedMSBuildEditorConfig.editorconfig
+D:\Fontys_sem_2\Group_pr\G1_MediaBazaar\CustomExceptions\obj\Debug\net6.0\CustomExceptions.AssemblyInfoInputs.cache
+D:\Fontys_sem_2\Group_pr\G1_MediaBazaar\CustomExceptions\obj\Debug\net6.0\CustomExceptions.AssemblyInfo.cs
+D:\Fontys_sem_2\Group_pr\G1_MediaBazaar\CustomExceptions\obj\Debug\net6.0\CustomExceptions.csproj.CoreCompileInputs.cache
+D:\Fontys_sem_2\Group_pr\G1_MediaBazaar\CustomExceptions\obj\Debug\net6.0\CustomExceptions.dll
+D:\Fontys_sem_2\Group_pr\G1_MediaBazaar\CustomExceptions\obj\Debug\net6.0\refint\CustomExceptions.dll
+D:\Fontys_sem_2\Group_pr\G1_MediaBazaar\CustomExceptions\obj\Debug\net6.0\CustomExceptions.pdb
+D:\Fontys_sem_2\Group_pr\G1_MediaBazaar\CustomExceptions\obj\Debug\net6.0\ref\CustomExceptions.dll

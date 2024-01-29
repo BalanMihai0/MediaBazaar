@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\G1_MediaBazaar_Web.props" />
+</Project>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Update="DepartmentDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="DepartmentEntity.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MenuAdministrator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MenuDepartmentManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="MenuEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ReassignEmpAndProd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Schedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ShiftEntity.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="Workshifts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
