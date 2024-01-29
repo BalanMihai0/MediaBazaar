@@ -33,3 +33,9 @@ This is a .NET fullstack application designed as management software for a ficti
 - Utilizes a 3-layer model and class structure aligned with OOP and SOLID principles.
 - Database modeled using the table-per-type approach.
 - Development process follows a branching model using feature branches, with reference available at nvie.com (post by Vincent Driessen).
+
+### Documentation
+- The application development was planned in the project plan, along with the User Requirements Specification (URS) document.
+- Quality is assured and documented in the Test Plan and Test Report, which reference every use case present in the URS.
+- Entity Relationship Diagrams for the database were made for every change
+- UML class diagram is present for the entire application as a whole, as well as for each individual library
