@@ -1,0 +1,192 @@
+﻿@page
+@model G1_MediaBazaar_Web.Pages.ProfilePageModel
+@using UserLibrary;
+@{
+    ViewData["Title"] = "Profile page";
+}
+
+<div class="container">
+    @if (Model.UserType == typeof(Employee))
+    {
+        <h2>@Model.employee.FirstName @Model.employee.LastName's Profile</h2>
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <th>First Name</th>
+                    <td>@Model.employee.FirstName</td>
+                </tr>
+                <tr>
+                    <th>Last Name</th>
+                    <td>@Model.employee.LastName</td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td>@Model.employee.Email</td>
+                </tr>
+                <tr>
+                    <th>Phone number</th>
+                    <td>@Model.employee.PhoneNumber</td>
+                </tr>
+                <tr>
+                    <th>Job Title</th>
+                    <td>@Model.employeeJob.JobTitle</td>
+                </tr>
+                <tr>
+                    <th>Salary</th>
+                    <td>@Model.employee.Salary</td>
+                </tr>
+                <tr>
+                    <th>Department</th>
+                    <td>@Model.dept.DepartmentName, Located at @Model.dept.LocationId</td>
+                </tr>
+                <tr>
+                    <th>Manager</th>
+                    <td>@Model.manager.FirstName @Model.manager.LastName</td>
+                </tr>
+
+                <tr>
+                    <th>Password</th>
+                    <td>********</td>
+                </tr>
+                <tr>
+                    <th>Hire Date</th>
+                    <td>@Model.employee.HireDate.ToString("yyyy-MM-dd")</td>
+                </tr>
+            </tbody>
+        </table>
+    }
+    else if (Model.UserType == typeof(Manager))
+    {
+        <h2>@Model.manager.FirstName @Model.manager.LastName's Profile</h2>
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <th>First Name</th>
+                    <td>@Model.manager.FirstName</td>
+                </tr>
+                <tr>
+                    <th>Last Name</th>
+                    <td>@Model.manager.LastName</td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td>@Model.manager.Email</td>
+                </tr>
+                <tr>
+                    <th>Phone number</th>
+                    <td>@Model.manager.PhoneNumber</td>
+                </tr>
+                <tr>
+                    <th>Job Title</th>
+                    <td>@Model.employeeJob.JobTitle</td>
+                </tr>
+                <tr>
+                    <th>Salary</th>
+                    <td>@Model.manager.Salary</td>
+                </tr>
+                <tr>
+                    <th>Department</th>
+                    <td>@Model.dept.DepartmentName, Located at @Model.dept.LocationId</td>
+                </tr>
+                <tr>
+                    <th>Manager</th>
+                    <td>@Model.manager.FirstName @Model.manager.LastName</td>
+                </tr>
+
+                <tr>
+                    <th>Password</th>
+                    <td>********</td>
+                </tr>
+                <tr>
+                    <th>Hire Date</th>
+                    <td>@Model.manager.HireDate.ToString("yyyy-MM-dd")</td>
+                </tr>
+            </tbody>
+        </table>
+    }
+    else if (Model.UserType == typeof(Administrator))
+    {
+        <h2>@Model.admin.FirstName @Model.admin.LastName's Profile</h2>
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <th>First Name</th>
+                    <td>@Model.admin.FirstName</td>
+                </tr>
+                <tr>
+                    <th>Last Name</th>
+                    <td>@Model.admin.LastName</td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td>@Model.admin.Email</td>
+                </tr>
+                <tr>
+                    <th>Job Title</th>
+                    <td>Adminsitrator</td>
+                </tr>
+                <tr>
+                    <th>Password</th>
+                    <td>********</td>
+                </tr>
+                <tr>
+                    <th>Hire Date</th>
+                    <td>@Model.admin.HireDate.ToString("yyyy-MM-dd")</td>
+                </tr>
+            </tbody>
+        </table>
+    }
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editProfileModal">
+        Update Profile
+    </button>
+
+    <div class="modal fade" id="editProfileModal" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Update Profile</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form method="post">
+
+                        <div class="form-group">
+                            <label for="firstName">First Name:</label>
+                            <input type="text" class="form-control" id="firstName" asp-for="profileForm.firstName" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lastName">Last Name:</label>
+                            <input type="text" class="form-control" id="lastName" asp-for="profileForm.lastName" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" class="form-control" id="email" asp-for="profileForm.email" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Old Password:</label>
+                            <input type="password" class="form-control" id="oldPass" asp-for="profileForm.oldPass" />
+                        </div>
+                        <div class="form-group">
+                            <label for="password">New Password:</label>
+                            <input type="password" class="form-control" id="newPass" asp-for="profileForm.newPass" />
+                        </div>
+                        @if (Model.UserType == typeof(Manager) || Model.UserType == typeof(Employee))
+                        {
+                            <div class="form-group">
+                                <label for="password">Phone Number:</label>
+                                <input type="text" class="form-control" id="phoneNumber"
+                                    asp-for="profileForm.phoneNumber" />
+                            </div>
+                        }
+
+                        <button type="submit" class="btn btn-primary">Update</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

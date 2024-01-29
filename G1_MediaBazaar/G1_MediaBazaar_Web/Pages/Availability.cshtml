@@ -1,0 +1,111 @@
+﻿@page "/Availability"
+@using Newtonsoft.Json;
+@model G1_MediaBazaar_Web.Pages.AvailabilityModel
+
+<div id="calendar"></div>
+
+@section Scripts {
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" rel="stylesheet" />
+
+        <script>
+            $(document).ready(function () {
+                $('#calendar').fullCalendar({
+                    header: {
+                        left: 'prev,next today',
+                        center: 'title',
+                        right: 'month,agendaWeek'
+                    },
+                    defaultView: 'month',
+                    defaultDate: moment(),
+                    navLinks: true,
+                    editable: false,
+                    eventLimit: true,
+                    contentHeight: 'auto',
+                    allDaySlot: false,
+                    views: {
+                        agendaWeek: {
+                            type: 'agenda',
+                            duration: { days: 7 },
+                            slotDuration: '00:30:00',
+                            columnFormat: 'ddd D/M',
+                            minTime: '08:00:00',
+                            maxTime: '20:00:00',
+                            slotLabelInterval: '04:00',
+                            slotLabelFormat: 'h(:mm)a',
+                            slotEventOverlap: false,
+                            slotHeight: 25
+                        }
+                    },
+                events: [
+        @foreach (var availabilityEvent in Model.events)
+        {
+            var eventStart = availabilityEvent.start;
+            var eventEnd = availabilityEvent.end;
+            <text>
+                        {
+                            title: 'Available',
+                            start: '@eventStart',
+                            end: '@eventEnd'
+                        },
+            </text>
+        }
+                        ],
+                    dayClick: function (date, jsEvent, view) {
+                        if (date.isBefore(moment())) {
+                            return;
+                        }
+                        var formattedDate = date.format('YYYY-MM-DD');
+                        $('#selectedDate').html('Date: ' + formattedDate);
+                        $('#selectedDateValue').val(formattedDate); // Set the selected date in the hidden input field
+                        $('#exampleModal').modal('show');
+                    },
+                    eventRender: function (event, element) {
+                        element.css('cursor', 'pointer');
+                    }
+                });
+            });
+        </script>
+}
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Set availability</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form method="post">
+                <div class="modal-body">
+                    <input type="hidden" asp-for="Date" id="selectedDateValue" />
+                    <p id="selectedDate"></p>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" asp-for="TimeOfDay" id="morning" value="Morning">
+                        <label class="form-check-label" for="morning">
+                            Morning (8:00 - 12:00)
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" asp-for="TimeOfDay" id="afternoon" value="Afternoon">
+                        <label class="form-check-label" for="afternoon">
+                            Afternoon (12:00 - 16:00)
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" asp-for="TimeOfDay" id="evening" value="Evening">
+                        <label class="form-check-label" for="evening">
+                            Evening (16:00 - 20:00)
+                        </label>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Set</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

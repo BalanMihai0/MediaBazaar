@@ -1,0 +1,61 @@
+﻿@page "/LogInPage"
+@model LogInPageModel
+
+
+<div class="bg-gray ">
+    <div class="container d-flex align-items-center justify-content-center p-0 vh-100">
+        
+            <div class="card w-50">
+                <div class="card-header bg-vs-red text-white">
+                    <h3 class="card-title text-center">Login, please</h3>
+                </div>
+                <div class="card-body">
+                    @if (Model.ErrorMessage != null)
+                    {
+                        <div class="alert alert-danger">@Model.ErrorMessage</div>
+                    }
+
+                    <form method="post">
+                        <div class="mb-3">
+                            <label for="employeeid" class="form-label">Employee ID:</label>
+                            <input type="text" class="form-control" id="employeeid" name="employeeid" value="@Model.EmployeeId" required />
+                        </div>
+                        <div class="mb-3">
+                            <label for="Password" class="form-label">Password:</label>
+                            <input type="password" class="form-control" id="password" name="password" required />
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-vs-red text-white">Login</button>
+                        </div>
+                        <div class="text-center">
+                            <a href="./ForgotPassword">Forgot Password?</a>
+                        </div>
+                    </form>
+                </div>
+            
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('form').submit(function () {
+                if ($('#EmployeeId').val() == '' || $('#Password').val() == '') {
+                    $('.alert').text('Please enter your Employee Id and Password.').show();
+                    return false;
+                } else {
+                    $('.alert').hide();
+                }
+            });
+        });
+    </script>
+
+    @if ((int)TempData["Admin-attempt"] == 1)
+    {
+        // admin or manager attempted login
+        <script>
+            alert("You need to be an employee to log in!");
+        </script>
+    }
+}

@@ -1,0 +1,22 @@
+.bg-gray {
+    background-color: #4d4d4d;
+}
+
+.bg-vs-red {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-vs-red {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+    .btn-vs-red:hover {
+        background-color: #c82333;
+        border-color: #bd2130;
+    }
+
+    .btn-vs-red:focus {
+        box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.5);
+    }
